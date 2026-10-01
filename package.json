@@ -1,0 +1,16 @@
+{
+  "name": "gem-rush-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bot de Telegram de Gem Rush para Acurast",
+  "main": "index.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node index.js",
+    "bundle": "esbuild index.js --bundle --platform=node --target=node20 --outfile=dist/bundle.js",
+    "deploy": "npm run bundle && acurast deploy"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.0"
+  }
+}
